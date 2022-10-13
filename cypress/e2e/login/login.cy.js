@@ -1,3 +1,5 @@
+import { password } from './secret.js';
+
 describe('User Login', () => {
   it('should a visitor to login', () => {
     cy.visit('https://dribbble.com/');
@@ -8,7 +10,7 @@ describe('User Login', () => {
 
     cy.get('[name="login"]').type('svetlana-data');
 
-    cy.get('[name="password"]').type('Xr:+G8K!)@_cXjP');
+    cy.get('[name="password"]').type(password);
 
     cy.get('[type="submit"]').click();
   });
